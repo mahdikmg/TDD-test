@@ -1,6 +1,6 @@
 let url = "/karfarmas/address";
 
-export default $api => ({
+export default ($api) => ({
   getRequests() {
     return $api.get(`${url}`);
   },

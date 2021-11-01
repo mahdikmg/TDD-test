@@ -1,21 +1,21 @@
-import axios from 'axios'
-import serviceApi from './serviceApi'
+import axios from "axios";
+import serviceApi from "./serviceApi";
 
-const baseURL = `${process.env.VUE_APP_BASE_URL}`
+const baseURL = `${process.env.VUE_APP_BASE_URL}`;
 
 let instance = axios.create({
-    baseURL,
-    headers: {
-        'Content-Type': 'application/json',
-        Authorization: {
-            username: `${process.env.VUE_APP_USERNAME}`,
-            password: `${process.env.VUE_APP_PASSWORD}`
-        }
-    }
-})
+  baseURL,
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: {
+      username: `${process.env.VUE_APP_USERNAME}`,
+      password: `${process.env.VUE_APP_PASSWORD}`,
+    },
+  },
+});
 
 const apis = {
-    service: serviceApi(instance),
+  service: serviceApi(instance),
 };
 
-export default apis
+export default apis;
