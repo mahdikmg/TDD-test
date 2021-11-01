@@ -1,0 +1,39 @@
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+    src: url("../font/yekanbakh-light.eot");
+    src: url("../font/yekanbakh-light.woff") format("woff"), url("../font/yekanbakh-light.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url("../font/yekanbakh-medium.eot");
+    src: url("../font/yekanbakh-medium.woff") format("woff"), url("../font/yekanbakh-medium.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 600;
+    src: url("../font/yekanbakh-bold.eot");
+    src: url("../font/yekanbakh-bold.woff") format("woff"), url("../font/yekanbakh-bold.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 800;
+    src: url("../font/yekanbakh-fat.eot");
+    src: url("../font/yekanbakh-fat.woff") format("woff"), url("../font/yekanbakh-fat.ttf") format("truetype")
+}
+
+* {
+    font-family: "YekanBakh", sans-serif;
+}
