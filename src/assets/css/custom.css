@@ -1,0 +1,35 @@
+.vh-100 {
+    height: 100vh;
+}
+.h-100 {
+    height: 100%;
+}
+.v-data-footer *, .v-data-footer, nav * {
+    direction: rtl !important;
+}
+
+a, .link-color {
+    color: #3498db !important;
+    text-decoration: none !important;
+}
+a:hover, .link-color:hover {
+    color: #1d6fa5 !important;
+}
+.bulletBefore:before {
+    margin: 0 6px;
+    font-weight: 700;
+    content: "\00b7";
+}
+.v-pagination {
+    direction: ltr !important;
+}
+
+.numInput input[type="number"] {
+    -moz-appearance: textfield;
+}
+.numInput input::-webkit-outer-spin-button,
+.numInput input::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
