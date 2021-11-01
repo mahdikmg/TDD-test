@@ -1,6 +1,6 @@
 <template>
   <div class="vh-100">
-    <div class="title">
+    <div :class="[windowWidth > 768 ? '' : 'w-100', 'title']">
       <v-card outlined min-width="350px">
         <v-list-item>
           <v-list-item-content>
@@ -16,7 +16,17 @@
         </v-list-item>
       </v-card>
     </div>
-    <MapSection />
+    <MapSection @centerUpdated="(payload) => (this.location = payload)" />
+    <div class="footer w-100">
+      <v-btn
+        color="success"
+        x-large
+        :width="windowWidth > 768 ? '300px' : '100%'"
+        @click="handleNext"
+      >
+        <div class="text-h6">تاییـد موقعــیت</div>
+      </v-btn>
+    </div>
   </div>
 </template>
 
@@ -25,8 +35,25 @@ import MapSection from "@/components/home/map.vue";
 
 export default {
   name: "homepage",
+  data() {
+    return {
+      location: {
+        lat: 35.7023,
+        lng: 51.338424,
+      },
+    };
+  },
+  methods: {
+    handleNext() {
+      this.$router.push({ name: "request", params: this.location });
+    },
+  },
   components: {
     MapSection,
+  },
+  props: {
+    windowWidth: Number,
+    windowHeight: Number,
   },
 };
 </script>
@@ -36,5 +63,11 @@ export default {
   position: fixed !important;
   z-index: 9999;
   right: 0;
+}
+.footer {
+  position: fixed !important;
+  z-index: 9999;
+  bottom: 0;
+  padding: 10px;
 }
 </style>

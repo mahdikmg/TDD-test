@@ -8,10 +8,11 @@
       style="height: 100%"
       @update:center="centerUpdate"
     >
-      <l-tile-layer :url="url" :attribution="attribution" />
-      <!-- <l-marker :lat-lng="marker" /> -->
+      <l-tile-layer :url="url" />
     </l-map>
-    <v-icon color="primary" class="pin" size="50px"> mdi-map-marker </v-icon>
+    <v-icon color="primary" class="pin" size="60px">
+      mdi-map-marker-outline
+    </v-icon>
   </div>
 </template>
 
@@ -33,13 +34,15 @@ export default {
       marker: latLng(35.699582, 51.33767),
       mapOptions: {
         zoomSnap: 0.5,
+        zoomControl: false,
+        attributionControl: false,
       },
       showMap: true,
     };
   },
   methods: {
     centerUpdate(center) {
-      this.marker = center;
+      this.$emit("centerUpdated", center);
     },
   },
   components: {
@@ -53,7 +56,7 @@ export default {
 .pin {
   z-index: 999;
   position: fixed !important;
-  top: calc(50% - 25px);
-  left: calc(50% - 25px);
+  top: calc(50% - 50px);
+  left: calc(50% - 30px);
 }
 </style>
