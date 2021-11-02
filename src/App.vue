@@ -4,7 +4,7 @@
       <router-view :windowWidth="windowWidth" :windowHeight="windowHeight" />
     </v-main>
 
-    <v-overlay :opacity="0.5" :value="$loading.state.status" style="z-index: 9">
+    <v-overlay :opacity="0.3" :value="$loading.state.status" style="z-index: 9">
       <v-progress-circular indeterminate size="64" color="primary">
       </v-progress-circular>
     </v-overlay>

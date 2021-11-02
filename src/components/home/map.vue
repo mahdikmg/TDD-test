@@ -28,7 +28,7 @@ export default {
     return {
       zoom: 15,
       center: latLng(this.initialCenter.lat, this.initialCenter.lng),
-      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      url: "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png",
       mapOptions: {
         zoomSnap: 0.5,
         zoomControl: false,
