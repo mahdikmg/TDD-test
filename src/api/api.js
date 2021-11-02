@@ -7,10 +7,10 @@ let instance = axios.create({
   baseURL,
   headers: {
     "Content-Type": "application/json",
-    Authorization: {
-      username: `${process.env.VUE_APP_USERNAME}`,
-      password: `${process.env.VUE_APP_PASSWORD}`,
-    },
+  },
+  auth: {
+    username: process.env.VUE_APP_USERNAME,
+    password: process.env.VUE_APP_PASSWORD,
   },
 });
 

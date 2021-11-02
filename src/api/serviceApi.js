@@ -1,10 +1,10 @@
 let url = "/karfarmas/address";
 
-export default ($api) => ({
+export default (api) => ({
   getRequests() {
-    return $api.get(`${url}`);
+    return api.get(`${url}`);
   },
   createRequest(payload) {
-    return $api.post(`${url}`, payload);
+    return api.post(`${url}`, payload);
   },
 });

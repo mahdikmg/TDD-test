@@ -17,7 +17,7 @@
         :color="notif.color"
         left
         bottom
-        :style="`bottom: ${index * 60}px;`"
+        :style="`bottom: ${index * 60}px;z-index: 999999;`"
         :absolute="true"
         v-if="notif.show"
         :value="notif.show"
@@ -42,6 +42,9 @@ export default {
       this.windowWidth = window.innerWidth;
       this.windowHeight = window.innerHeight;
     },
+  },
+  mounted() {
+    this.handleResize();
   },
 };
 </script>

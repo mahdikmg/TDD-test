@@ -28,7 +28,7 @@ Vue.use(notif, {
 Vue.config.productionTip = false;
 
 // access api globally
-Vue.prototype.api = api;
+Vue.prototype.$api = api;
 
 new Vue({
   vuetify,

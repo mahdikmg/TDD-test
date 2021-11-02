@@ -27,11 +27,8 @@ export default {
   data() {
     return {
       zoom: 15,
-      center: latLng(35.699582, 51.33767),
+      center: latLng(this.initialCenter.lat, this.initialCenter.lng),
       url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-      attribution:
-        '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      marker: latLng(35.699582, 51.33767),
       mapOptions: {
         zoomSnap: 0.5,
         zoomControl: false,
@@ -44,6 +41,9 @@ export default {
     centerUpdate(center) {
       this.$emit("centerUpdated", center);
     },
+  },
+  props: {
+    initialCenter: Object,
   },
   components: {
     LMap,

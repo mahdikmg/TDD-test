@@ -17,7 +17,6 @@
     "vue-infinite-loading": "^2.4.5",
     "vue-router": "^3.2.0",
     "vue2-leaflet": "^2.7.1",
-    "vuelidate": "^0.7.6",
     "vuetify": "^2.5.10"
   },
   "devDependencies": {
