@@ -27,6 +27,7 @@
           x-large
           :width="windowWidth > 768 ? '300px' : '100%'"
           @click="handleNext"
+          data-test="confirmBtn"
         >
           <div class="text-h6">تاییـد موقعــیت</div>
         </v-btn>

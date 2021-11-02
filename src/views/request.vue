@@ -25,6 +25,7 @@
                     :rules="requiredRules"
                     required
                     outlined
+                    data-test="firstName"
                   />
                 </v-col>
                 <v-col cols="12" sm="6" class="pb-0">
@@ -34,6 +35,7 @@
                     :rules="requiredRules"
                     required
                     outlined
+                    data-test="lastName"
                   />
                 </v-col>
                 <v-col cols="12" sm="6" class="pb-0">
@@ -45,6 +47,7 @@
                     outlined
                     type="number"
                     class="numInput"
+                    data-test="phoneNum"
                   />
                 </v-col>
                 <v-col cols="12" sm="6" class="pb-0">
@@ -57,6 +60,7 @@
                     outlined
                     type="number"
                     class="numInput"
+                    data-test="phoneTel"
                   />
                 </v-col>
                 <v-col cols="12" class="pb-0">
@@ -66,6 +70,7 @@
                     :rules="requiredRules"
                     required
                     outlined
+                    data-test="address"
                   />
                 </v-col>
                 <v-col cols="12" sm="6" class="pb-0">
@@ -76,6 +81,7 @@
                       class="flex-grow-1 ml-1"
                       :outlined="gender === 'Female'"
                       @click="gender = 'Male'"
+                      data-test="genderMale"
                       >آقا</v-btn
                     >
                     <v-btn
@@ -83,6 +89,7 @@
                       class="flex-grow-1 mr-1"
                       :outlined="gender === 'Male'"
                       @click="gender = 'Female'"
+                      data-test="genderFemale"
                       >خانم</v-btn
                     >
                   </div>
@@ -98,7 +105,8 @@
                     x-large
                     :width="windowWidth > 768 ? '300px' : '100%'"
                     :disabled="!valid"
-                    >مرحله بعد</v-btn
+                    data-test="confirmBtn"
+                    >ارســال</v-btn
                   >
                 </v-col>
               </v-row>
